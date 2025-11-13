@@ -17,7 +17,7 @@ A professionally designed real estate services website built to help users find,
 
 ## 🌐 Demo
 🔗 **Live Preview:** [View Demo](https://real-estate-livid-eta.vercel.app/)  
-📦 **Repository:** [GitHub Repo](https://github.com/ahsanelm39-star/Next-JS-Real-Estate-Website)
+📦 **Repository:** [GitHub Repo](https://github.com/ahsanelm39-star/URBANBUILD)
 
 ---
 
