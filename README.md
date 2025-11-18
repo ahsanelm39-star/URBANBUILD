@@ -26,7 +26,7 @@ A professionally designed real estate services website built to help users find,
 |---------|--------|
 | **Framework** | React / Next.js  |
 | **Language** | TypeScript |
-| **Styling** | Tailwind CSS / SCSS |
+| **Styling** | Tailwind CSS |
 | **Icons** | Font Awesome |
 | **Deployment** | Vercel |
 ---
