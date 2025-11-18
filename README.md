@@ -48,14 +48,14 @@ npm install
 npm run dev
 ```
  Open your browser at:
-```bash 
+```text
 http://localhost:3000
 ```
 
 ---
 
 
-## build
+## Build
 Create a production build:
 ```bash
 npm run build
@@ -65,15 +65,21 @@ npm run build
 npm start
 ```
 Next.js will output the optimized production version inside:
-```bash
+
 .next/
-```
+
 ## 🌐 Deploy on Vercel
+
 Push your project to GitHub.
+
 Go to Vercel Dashboard → Add New Project.
+
 Select the GitHub repository.
+
 Vercel will auto-detect Next.js.
+
 Default settings:
+
 | Value | Setting |
 |-----------|--------|
 | npm run build | Build Command |
