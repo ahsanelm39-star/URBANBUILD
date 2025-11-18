@@ -6,14 +6,6 @@ A professionally designed real estate services website built to help users find,
 
 ---
 
-## 🧩 Table of Contents
-- [Demo](#-demo)
-- [Features](#-features)
-- [Tech-Stack](#-tech-stack)
-- [Screenshots](#-screenshots)
-- [Installation](#-installation)
-
----
 
 ## 🌐 Demo
 🔗 **Live Preview:** [View Demo](https://real-estate-livid-eta.vercel.app/)  
@@ -31,12 +23,12 @@ A professionally designed real estate services website built to help users find,
 
 ## 🛠️ Tech Stack
 | Category | Tools |
-|-----------|--------|
-| Frontend | React.js / Next.js - Type Script |
-| Styling | Tailwind CSS / SCSS |
-|icons |font awesome |
-| Deployment | Vercel|
-
+|---------|--------|
+| **Framework** | Next.js (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS / SCSS |
+| **Icons** | Font Awesome |
+| **Deployment** | Vercel |
 ---
 
 ## 📸 Screenshots
@@ -51,6 +43,41 @@ A professionally designed real estate services website built to help users find,
 Clone the project and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/project-name.git
+git clone https://github.com/ahsanelm39-star/URBANBUILD.git
 npm install
 npm run dev
+```
+ Open your browser at:
+```bash 
+http://localhost:3000
+```
+
+---
+
+
+## build
+Create a production build:
+```bash
+npm run build
+```
+ Then start the production server:
+```bash
+npm start
+```
+Next.js will output the optimized production version inside:
+```bash
+.next/
+```
+## 🌐 Deploy on Vercel
+Push your project to GitHub.
+Go to Vercel Dashboard → Add New Project.
+Select the GitHub repository.
+Vercel will auto-detect Next.js.
+Default settings:
+| Value | Setting |
+|-----------|--------|
+| npm run build | Build Command |
+| npm install | Install Command |
+| .next | Output Directory |
+
+Click Deploy — done!
