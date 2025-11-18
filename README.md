@@ -24,7 +24,7 @@ A professionally designed real estate services website built to help users find,
 ## 🛠️ Tech Stack
 | Category | Tools |
 |---------|--------|
-| **Framework** | Next.js (App Router) |
+| **Framework** | React / Next.js  |
 | **Language** | TypeScript |
 | **Styling** | Tailwind CSS / SCSS |
 | **Icons** | Font Awesome |
