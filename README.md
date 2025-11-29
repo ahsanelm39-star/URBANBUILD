@@ -80,7 +80,7 @@ Vercel will auto-detect Next.js.
 
 Default settings:
 
-| Value | Setting |
+|  Setting | Value |
 |-----------|--------|
 | npm run build | Build Command |
 | npm install | Install Command |
