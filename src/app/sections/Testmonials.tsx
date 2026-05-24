@@ -1,21 +1,17 @@
-import Btn from "./Btn"
-import SpecialHead from "./SpecialHead"
+import Btn from "../components/Btn"
+import SpecialHead from "../components/SpecialHead"
 import Image from "next/image"
 import TestImg from '../../../public/images/img/testimonials/img.jpg'
 import TestAvatar from '../../../public/images/img/testimonials/avatar.jpg'
 import TestQuote from '../../../public/images/img/testimonials/quote.svg'
 import Link from "next/link"
-///////
-
-
-import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@/components/ui/carousel"
 
 
@@ -24,7 +20,7 @@ import {
 const Testmonials = () => {
     return (
         <section className="py-14 max-sm:pb-80 testmonial-section">
-            <div className="collect flex justify-between max-lg:flex-col max-lg:gap-10">
+            <div className="container mx-auto px-4 flex justify-between max-lg:flex-col max-lg:gap-10">
                 <div className="w-1/1 md:w-[600px] max-lg:mx-auto max-lg:text-center">
                         <div className="max-lg:flex max-lg:justify-center">
                             <SpecialHead text="TESTIMONIAL"/>
@@ -36,7 +32,9 @@ const Testmonials = () => {
                     </Link>
                 </div>
                 <div className=" relative">
-                    <div className="w-[500px] max-sm:w-1/1 h-[200px] absolute p-12 max-sm:p-0 bg-white shadow-xl  -bottom-6 -left-[60%] max-lg:-bottom-10 max-lg:left-[50%] max-lg:-translate-x-[50%] max-sm:-bottom-60 border border-[#eee] flex justify-center items-center ">
+                    <div className="w-[500px] max-sm:w-1/1 h-[200px] absolute p-12 max-sm:p-0 bg-white shadow-xl  -bottom-6 
+                    -left-[60%] max-lg:-bottom-10 max-lg:left-[50%] max-lg:-translate-x-[50%] max-sm:-bottom-60 border 
+                    border-[#eee] flex justify-center items-center ">
                         {/* /////// */}
                             <Carousel className="w-full max-w-xs ">
                                 <CarouselContent className="h-[200px]">
@@ -49,7 +47,7 @@ const Testmonials = () => {
                                                     {/* content */}
                                                     <div className="flex flex-col  relative">
                                                         <div className="flex gap-4 items-center mb-4">
-                                                            <Image src={TestAvatar} alt={'testmonial avata'} className="w-15 h-15"/>
+                                                            <Image src={TestAvatar} alt={'testmonial avatar'} className="w-15 h-15"/>
                                                             <span className="font-bold text-md">Jane Doe</span>
                                                         </div>
                                                             <Image src={TestQuote} alt={'Testimonial quote'}  className=" absolute top-0 right-0 z-20"/>

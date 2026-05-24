@@ -1,54 +1,42 @@
 "use client"
 import Image from 'next/image';
 import Logo from '../../../public/images/logo.png'
-import  List  from './List';
-import Btn from './Btn';
+import  List  from '../components/List';
+import Btn from '../components/Btn';
 import Link from "next/link";
-import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Nave = () => {
 
-
-    useEffect(()=>{
-        const els = document.querySelectorAll(".ul li") as NodeListOf<HTMLElement>
-        els.forEach((el)=>{
-            el.addEventListener("click",()=>{
-                els.forEach((ele)=>{
-                    ele.classList.remove("on")
-                })
-                el.classList.add("on")
-            })
-        })
-    },[])
-
+    const menuItems = [
+        { label: "HOME", href: "/" },
+        { label: "ABOUT", href: "#about" },
+        { label: "SERVICES", href: "#services" },
+        { label: "PROJECTS", href: "#projects" },
+        { label: "CONTACT", href: "#contact" },
+    ];
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <nav className='bg-primary '>
-            <div className="collect  flex justify-between items-center py-3">
+            <div className="container mx-auto flex justify-between py-3 px-4">
                 <div>
-                    <Link href={'#hero'}>
+                    <Link href={'/'}>
                         <Image src={Logo} alt="Logo"  height={48} width={230} className='max-md:w-50 mr-8'/>
                     </Link>
                 </div>
                 <div className='flex gap-10'>
-                    <ul className='flex text-white items-center max-md:hidden ml-9 ul'>
-                        <Link href='#hero'>
-                            <li className=' on relative font-medium p-2 cursor-pointer text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>HOME</li>
+                    <div className='flex text-white items-center list-ul max-md:hidden'>
+                        {menuItems.map((item, idx) => (
+                        <Link href={item.href} key={item.label} onClick={() => { 
+                            setActiveIndex(idx)
+                            }} className={`py-2 px-3 ${item.label === 'CONTACT' ? 'pr-0' : ''} font-medium 
+                            cursor-pointer transition-all hover:text-[#ffd76e] ${activeIndex === idx ? "main_color_text" : ""}`}>
+                            {item.label}
                         </Link>
-                        <Link href='#about'>
-                            <li className=' relative font-medium p-2 cursor-pointer text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>ABOUT</li>
-                        </Link>
-                        <Link href='#services'>
-                        <li className=' relative font-medium p-2 cursor-pointer text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>SERVICES</li>
-                        </Link>
-                        <Link href='#projects'>
-                        <li className=' relative font-medium p-2 cursor-pointer text-sm after:content-["/"] after:text-[#ffd76e] after:absolute after:-right-3 mr-4 hover:text-[#ffd76e] transition-all'>PROJECTS</li>
-                        </Link>
-                        <Link href='#contact'>
-                        <li className=' relative font-medium p-2 cursor-pointer text-sm  hover:text-[#ffd76e] transition-all'>CONTACT</li>
-                        </Link>
-                    </ul>
-                    <Link href={'#contact'}>
+                        ))}
+                    </div>
+                    <Link href={'#contact'} className='max-lg:hidden'>
                         <Btn bg={'white'} text={"GET A QUOTE"}/>
                     </Link>
                 </div>

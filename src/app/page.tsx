@@ -1,25 +1,23 @@
-// commponents
-
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import FQA from "./sections/FQA";
-import GoUp from "./sections/GoUp";
+import GoUpBtn from "./components/GoUpBtn";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Services from "./sections/Services";
-import States from "./sections/States";
+import Status from "./sections/Status";
 import Testmonials from "./sections/Testmonials";
 import Work from "./sections/Work";
 
 const Home = () => {
   return (
     <div>
-      <GoUp />
+      <GoUpBtn />
       <Header />
       <Hero />
       <About />
-      <States />
+      <Status />
       <Services />
       <Work />
       <Testmonials />

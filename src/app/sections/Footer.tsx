@@ -1,13 +1,13 @@
 import Image from "next/image"
 import logo from '../../../public/images/logo.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight, faComment, faLocationArrow, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faComment, faLocationArrow, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
     return (
         <footer className="bg-primary pt-14">
-            <div className="collect flex flex-wrap gap-6 max-sm:gap-12 justify-between">
+            <div className="container mx-auto px-4 flex flex-wrap gap-6 max-sm:gap-12 justify-between">
                 <div className="w-80">
                     <Image src={logo} alt={"lgo"} height={48} width={230} className='max-md:w-50 mr-8'/>
                     <p className="p text-sm text-[#c3c3c3] pt-6">Lorem ipsum dolor Nihil nam eveniet nostrum saepe? Sint ut pariatur perspiciatis.</p>

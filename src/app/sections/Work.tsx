@@ -1,4 +1,4 @@
-import SpecialHead from "./SpecialHead"
+import SpecialHead from "../components/SpecialHead"
 import Image from "next/image"
 import workImg_1 from '../../../public/images/img/work/renovation.jpg'
 import workImg_2 from '../../../public/images/img/work/consulting.jpg'

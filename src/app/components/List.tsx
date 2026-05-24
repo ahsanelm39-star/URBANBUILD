@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,7 @@ import MopileLogo from '../../../public/images/logo.png'
 import { faFacebookF, faInstagram, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const menuItems = [
-  { label: "HOME", href: "#hero" },
+  { label: "HOME", href: "/" },
   { label: "ABOUT", href: "#about" },
   { label: "SERVICES", href: "#services" },
   { label: "PROJECTS", href: "#projects" },
@@ -17,43 +17,29 @@ const menuItems = [
 
 const List = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [openMenuo, setOpenMenuo] = useState(false);
 
-  function showMenuo() {
-    const menuo = document.querySelector(".menuo") as HTMLElement
-    menuo.classList.add("menuo-back")
-  }
-
-  useEffect(()=>{
-    window.addEventListener("click",(e)=>{
-      if (e.target instanceof Element) {
-        if(e.target.classList.contains("menuo")){
-          e.target.classList.remove("menuo-back")
-        }
-      }
-    })
-  },[])
-
-  function remove() {
-    const menuo = document.querySelector(".menuo") as HTMLElement
-    menuo.classList.remove("menuo-back")
-  }
-
-  function Menuo() {
-
-      return (
-      <div className={`md:hidden fixed bg-[#0000005d] w-full h-[100vh] top-0 
-      right-0 flex justify-end z-50 menuo transition-all duration-300 `}>
-
+  return (
+    <>
+      <div className='md:hidden'>
+        <FontAwesomeIcon icon={faBars} onClick={()=>setOpenMenuo(true)} 
+        className='text-white text-3xl cursor-pointer ' />
+      </div>
+        <div className={` ${openMenuo ? 'translate-x-[0]' : 'translate-x-[100%]'} md:hidden fixed bg-[#0000005d] w-full h-[100vh] top-0 
+      right-0 flex justify-end z-50  transition-all duration-300 `}>
         <div className=' bg-black h-[100vh] w-[250px] flex flex-col justify-evenly px-8'>
-          <span onClick={remove} className='text-2xl text-white font-medium cursor-pointer absolute top-6 right-6 transition-all hover:text-red-500'>X</span>
+          <span onClick={()=> setOpenMenuo(false)} className='text-2xl text-white font-medium cursor-pointer absolute top-6 right-6 transition-all hover:text-red-500'>X</span>
           <div>
-            <Link href={'#hero'}>
+            <Link href={'/'}>
               <Image src={MopileLogo} alt='logo' />
             </Link>
           </div>
           <ul className='flex flex-col gap-6 text-white items-center list-ul'>
             {menuItems.map((item, idx) => (
-              <Link href={item.href} key={item.label} onClick={() => { setActiveIndex(idx); }}>
+              <Link href={item.href} key={item.label} onClick={() => { 
+                setActiveIndex(idx) 
+                setOpenMenuo(false)
+                }}>
                 <li className={`cursor-pointer transition-all hover:text-[#ffd76e] ${activeIndex === idx ? "on" : ""}`}>
                   {item.label}
                 </li>
@@ -68,13 +54,6 @@ const List = () => {
           </div>
         </div>
       </div>
-    )
-    }
-
-  return (
-    <>
-      <FontAwesomeIcon icon={faBars} onClick={showMenuo} className='list text-white text-[28px] cursor-pointer' />
-      <Menuo />
     </>
   )
 }
