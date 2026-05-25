@@ -5,6 +5,7 @@ import FQA from "./sections/FQA";
 import GoUpBtn from "./components/GoUpBtn";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
+import ScrollSection from "./components/ScrollSection";
 import Services from "./sections/Services";
 import Status from "./sections/Status";
 import Testmonials from "./sections/Testmonials";
@@ -15,15 +16,33 @@ const Home = () => {
     <div>
       <GoUpBtn />
       <Header />
-      <Hero />
-      <About />
-      <Status />
-      <Services />
-      <Work />
-      <Testmonials />
-      <FQA />
-      <Contact />
-      <Footer />
+      <ScrollSection>
+        <Hero />
+      </ScrollSection>
+      <ScrollSection>
+        <About />
+      </ScrollSection>
+      <ScrollSection>
+        <Status />
+      </ScrollSection>
+      <ScrollSection>
+        <Services />
+      </ScrollSection>
+      <ScrollSection>
+        <Work />
+      </ScrollSection>
+      <ScrollSection>
+        <Testmonials />
+      </ScrollSection>
+      <ScrollSection>
+        <FQA />
+      </ScrollSection>
+      <ScrollSection>
+        <Contact />
+      </ScrollSection>
+      <ScrollSection>
+        <Footer />
+      </ScrollSection>
     </div>
   );
 };
