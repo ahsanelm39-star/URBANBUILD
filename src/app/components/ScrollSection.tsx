@@ -8,7 +8,7 @@ type ScrollSectionProps = {
   delay?: number;
 };
 
-const ScrollSection = ({ children, delay = 0 }: ScrollSectionProps) => {
+const ScrollSection = ({ children, delay = 0.3 }: ScrollSectionProps) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
